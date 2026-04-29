@@ -28,6 +28,15 @@ function setTheme(theme) {
   localStorage.setItem('admiral-theme', theme);
   const icon = document.getElementById('themeIcon');
   if (icon) icon.className = theme === 'dark' ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+  updateLogos(theme);
+}
+
+function updateLogos(theme) {
+  const logoSrc = theme === 'dark' ? 'Image/Logo.svg' : 'Image/ADMIRAL-Light-logo.png';
+  const navLogo = document.getElementById('navLogo');
+  const footerLogo = document.getElementById('footerLogo');
+  if (navLogo) navLogo.src = logoSrc;
+  if (footerLogo) footerLogo.src = logoSrc;
 }
 
 /* ── NAV SCROLL ── */

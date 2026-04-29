@@ -145,9 +145,14 @@
   font-size: .85rem; padding: 8px 0;
   border-bottom: 1px solid var(--border);
   color: var(--text);
+  display: flex; justify-content: space-between; align-items: center;
 }
 .wine-row:hover { color: var(--accent); }
 .ca-inline { font-size: .75rem; }
+
+@media (max-width: 480px) {
+  .wine-glass-header, .wine-row { font-size: .75rem; }
+}
 
 /* ── SPIRITS GRID ── */
 .spirits-grid {

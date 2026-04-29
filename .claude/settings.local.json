@@ -10,7 +10,21 @@
       "Bash(kill 85421)",
       "mcp__pencil__get_editor_state",
       "Bash(grep -l \"Reserve\" *.html)",
-      "Bash(grep -E \"\\\\.js$|\\\\.html$\")"
+      "Bash(grep -E \"\\\\.js$|\\\\.html$\")",
+      "Bash(curl -s http://localhost:3000/)",
+      "Bash(curl -v http://localhost:8000/)",
+      "mcp__Claude_in_Chrome__tabs_context_mcp",
+      "mcp__Claude_in_Chrome__navigate",
+      "mcp__Claude_in_Chrome__computer",
+      "Bash(node server.js)",
+      "Bash(curl -s http://localhost:3000)",
+      "Bash(pkill -f \"node server.js\")",
+      "mcp__Claude_in_Chrome__browser_batch",
+      "mcp__Claude_in_Chrome__read_console_messages",
+      "mcp__Claude_in_Chrome__read_network_requests",
+      "mcp__Claude_in_Chrome__javascript_tool",
+      "mcp__Claude_in_Chrome__switch_browser",
+      "Bash(grep -E \"\\\\.html$\")"
     ]
   }
 }
