@@ -184,3 +184,7 @@
   .tap-header, .tap-row { grid-template-columns: 1fr 80px 80px; }
   .page-hero { min-height: 36vh; }
 }
+@media (max-width: 480px) {
+  .tap-header, .tap-row { grid-template-columns: 1fr 70px; }
+  .tap-header span:nth-child(n+3), .tap-row span:nth-child(n+3) { display: none; }
+}

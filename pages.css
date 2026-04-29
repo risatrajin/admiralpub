@@ -197,4 +197,5 @@
   .res-form-wrap { padding: 24px 20px; }
   .order-direct-hero { padding: 24px 20px; }
   .pickup-info-banner { padding: 24px 20px; }
+  .or-divider::before, .or-divider::after { width: calc(50% - 40px); }
 }
