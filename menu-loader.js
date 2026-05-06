@@ -9,7 +9,7 @@ const MENU_CONFIG = {
   SHEET_NAME: 'Menu',
   API_KEY: 'AIzaSyC7tNSWriQdcBeG5NnCDa2EMFqQIXbYt6E',
   CACHE_KEY: 'admiral_menu_cache',
-  CACHE_DURATION: 30 * 60 * 1000 // 30 minutes
+  CACHE_DURATION: 60 * 1000 // 1 min fallback only
 };
 
 /* ── Slug / display maps ── */
@@ -250,9 +250,7 @@ function renderDrinks(drinks) {
 
 /* ═══ FETCH & PARSE ═══ */
 async function fetchMenuFromSheets() {
-  const cached = getMenuCache();
-  if (cached) { console.log('Menu: using cache'); return cached; }
-
+  // Always fetch fresh — cache is fallback only on error
   try {
     const url = `https://sheets.googleapis.com/v4/spreadsheets/${MENU_CONFIG.SPREADSHEET_ID}/values/${encodeURIComponent(MENU_CONFIG.SHEET_NAME + '!A:N')}?key=${MENU_CONFIG.API_KEY}`;
     const res = await fetch(url);
